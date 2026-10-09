@@ -1,15 +1,27 @@
-# js
+# opencode
 
-To install dependencies:
+The OpenCode core package: the CLI, server, and core logic.
+
+Requirements: [Bun](https://bun.sh) 1.3+
+
+From the repository root, install dependencies and start OpenCode:
 
 ```bash
 bun install
+bun run dev
 ```
 
-To run:
+`bun run dev` runs `bun run --cwd packages/opencode src/index.ts`. To run the entry point directly from this directory:
 
 ```bash
-bun run index.ts
+bun run src/index.ts
 ```
 
-This project was created using `bun init` in bun v1.2.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Without arguments, both commands start the interactive TUI. To check your setup, pass `--help` or `--version`:
+
+```bash
+bun run dev --help             # from the repository root
+bun run src/index.ts --version # from packages/opencode
+```
+
+See [CONTRIBUTING.md](../../CONTRIBUTING.md) for the full development guide.
